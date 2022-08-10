@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="main.js" defer>
+    </script>
+    <title>ToDoList</title>
+</head> 
+
+<body>
+    <div class="wrapper">
+        <div class="mb-bottom-30">
+            <button id="show-form" type="button" class="button">Add a new todo</button>
+        </div>
+
+        <form id="todo-form" class="todo-form mb-bottom-30 hidden">
+            <div class="form-item">Add new todo</div>
+            <div class="form-item">
+                <input class="form-control" type="text" placeholder="Title" name="title">
+            </div>
+            <div class="form-item">
+                <input class="form-control" type="text" placeholder="Deadline" name="deadline">
+            </div>
+            <div class="form-item">
+                <select class="form-control" name="status" id="status">
+                    <option value="" selected disabled>Status</option>
+                    <option value="done">Done</option>
+                    <option value="not started">In started</option>
+                    <option value="in progress">In progress</option>
+                </select>
+            </div>
+            <div class="form-item form-buttons">
+                <button id="add-todo-cancel" type="reset" class="button button-dark">Cancel</button>
+                <button type="submit" class="button">Add</button>
+            </div>
+        </form>
+
+        <div class="todo-items mb-bottom-30">
+            <div class="todo-item status status-done">
+                <div class="todo-item-title">Learn JavaScript closure</div>
+                <div class="todo-item-dedline">Deadline: Done</div>
+            </div>
+            <div class="todo-item status status-not-started">
+                <div class="todo-item-title">Pay the internet bill</div>
+                <div class="todo-item-dedline">Deadline: Not started</div>
+            </div>
+            <div class="todo-item status status-in-progress">
+                <div class="todo-item-title">Have some fun</div>
+                <div class="todo-item-dedline">Deadline: In progress</div>
+            </div>
+        </div>
+
+        <div class="statuses-list">
+            <!-- <div class="status status-done">Done</div>
+            <div class="status status-not-started">Not started</div>
+            <div class="status status-in-progress">In progress</div> -->
+        </div>
+    </div>
+</body>
+
+</html>
